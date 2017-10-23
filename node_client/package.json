@@ -1,0 +1,14 @@
+{
+  "name": "node_client",
+  "version": "1.0.0",
+  "description": "Node js JSON-RPC client for ethereum private network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shindu666@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "node-json-rpc": "0.0.1"
+  }
+}
