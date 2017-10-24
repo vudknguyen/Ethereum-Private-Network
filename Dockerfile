@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install --yes geth
 
 RUN adduser --disabled-login --gecos "" eth_user
 
-WORKDIR /home/eth_user
 COPY eth_common /home/eth_user/eth_common
 RUN chown -R eth_user:eth_user /home/eth_user/eth_common
 
