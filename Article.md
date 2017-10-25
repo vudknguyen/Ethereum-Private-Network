@@ -16,6 +16,8 @@ To get the difference between Public and Private networks [read this article by 
 
 I assume you have got hand-on experience with Docker, also you’re knowing Ruby or Nodejs a little. 
 
+> You can ask why docker? I don't want to install `geth` locally.
+
 Copy the source code from my [Github repository.](https://github.com/fishbullet/Ethereum-Private-Network)
 
 Let’s get started from the Docker container creation, here is a Dockerfile for our ethereum nodes, we’ll be using geth:
@@ -55,10 +57,10 @@ Now let’s build two containers:
 
 ```bash
 docker build -t node_one .
-# Output ommited
+# Output omitted
 # ...
 docker build -t node_two .
-# Output ommited
+# Output omitted
 # ....
 ```
 
@@ -77,6 +79,7 @@ First one is ready(*don’t close terminal*), now second, open an another termin
 docker run --rm -it -p 8546:8546 --net=ETH node_two
 eth_user@node_two:~$ ls -a
 .  ..  .bash_logout  .bashrc  .ethereum  .profile  eth_common
+# Output omitted
 eth_user@node_two:~$
 ```
 
@@ -93,7 +96,7 @@ Inspect docker network(remember `IPv4Address`, we’ll use it later), run comman
 ```json
 [
     {
-        # ..... ommited ....
+        # ..... omitted ....
         "Containers": {
             "50e624e9481765443216eebaa4d0d7ae1dda3497f64eb55d6160632c7b7d0cce": {
                 "Name": "cocky_mccarthy",
@@ -110,7 +113,7 @@ Inspect docker network(remember `IPv4Address`, we’ll use it later), run comman
                 "IPv6Address": ""
             }
         },
-        # ..... ommited ....
+        # ..... omitted ....
     }
 ]
 ```
